@@ -1,4 +1,7 @@
 # Listen to Your Weather
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+EECS E6893 Final Project
+Group 35
 
 
 Our project constructed an hourly playlist generator system based on the real-time weather forecast using the 'OpenWeather' API, and 'Spotify' API. We performed experiments for temperature model selection by varying response encoding method, window size and model type. We finally deployed a real-time LSTM model in predicting both weather category and temperature. Due to privacy issues and access limits, we are not able to fetch global music playing data and construct any recommendation models, thus we recommend songs based on the user's playing history and top 50 music playlists provided by API. Our final product is a website where users could login, view 7 hours ahead temperature prediction results and play with the recommended playlists. 
