@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Spotify Weather</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/weather-icons.min.css') }}">
+   </head>
+   <body>
+      <div id="particles-js"></div>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script type="text/javascript">
+         particlesJS("particles-js",{particles:{number:{value:155,density:{enable:!0,value_area:789.1476416322727}},color:{value:"#ffffff"},shape:{type:"circle",stroke:{width:0,color:"#000000"},polygon:{nb_sides:5},image:{src:"img/github.svg",width:100,height:100}},opacity:{value:.48927153781200905,random:!1,anim:{enable:!0,speed:1,opacity_min:0,sync:!1}},size:{value:2,random:!0,anim:{enable:!0,speed:2,size_min:0,sync:!1}},line_linked:{enable:!0,distance:150,color:"#ffffff",opacity:.4,width:1},move:{enable:!0,speed:.2,direction:"none",random:!0,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:600,rotateY:1200}}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"bubble"},onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:400,line_linked:{opacity:1}},bubble:{distance:83.91608391608392,size:1,duration:3,opacity:1,speed:3},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0});
+      </script>
+
+      <div align="center">
+
+         <div class = "city">
+            New York
+         </div>
+         <div class = "temp">
+            &nbsp;{{weather[0][1]}}&#176;
+         </div>
+         <div class = "type">
+            {%if weather[0][0] == 0%}
+            Sunny
+            {%elif weather[0][0] == 1%}
+            Cloudy
+            {%elif weather[0][0] == 2%}
+            Windy
+            {%elif weather[0][0] == 3%}
+            Foggy
+            {%elif weather[0][0] == 4%}
+            Rainy
+            {%elif weather[0][0] == 5%}
+            Snowy
+            {%endif%}
+         </div>
+
+
+         <div class = "smallBrush">
+            <br>
+
+<!--         <button class="btn btn-outline btn-info" href="{{url_for('login', loginout = 'login')}}">Login with Spotify</button>-->
+<!--         <form method="POST">-->
+<!--            <input type="text" name="text" placeholder = "zip code" required pattern= "(\d{5}([\-]\d{4})?)">-->
+<!--            <input type="submit" value = "Login with Spotify">-->
+<!--         </form>-->
+<!--         <div id="setColumns">-->
+            <div class="row">
+               {%for wt in weather%}
+                  <div class="column_bottom">
+                     <div class="row">{{wt[2]}}</div>
+                     <br>
+                     {%if wt[0] == 0%}
+                     <div class="icon"><i class="wi wi-day-sunny"></i></div>
+                     {%elif wt[0] == 1%}
+                     <div class="icon"><i class="wi wi-cloud"></i></div>
+                     {%elif wt[0] == 2%}
+                     <div class="icon"><i class="wi wi-windy"></i></div>
+                     {%elif wt[0] == 3%}
+                     <div class="icon"><i class="wi wi-fog"></i></div>
+                     {%elif wt[0] == 4%}
+                     <div class="icon"><i class="wi wi-rain-mix"></i></div>
+                     {%elif wt[0] == 5%}
+                     <div class="icon"><i class="wi wi-snowflake-cold"></i></div>
+                     {%endif%}
+                     <div class="row">{{wt[1]}}&#176;</div>
+                  </div>
+               {%endfor%}
+            </div>
+         </div>
+
+         <br>
+         <br>
+         <br>
+         <div class = "music">
+            Get your music recommendation based on weather:
+            <br>
+            <br>
+            <form>
+               <button class = "button" formaction=/login>Login  with  Spotify</button>
+            </form>
+         </div>
+
+      </div>
+   </body>
+</html>
