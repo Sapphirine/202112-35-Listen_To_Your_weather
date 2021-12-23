@@ -37,4 +37,4 @@ Our project constructed an hourly playlist generator system based on the real-ti
 
 **Modelling and Experiments**
 
-<img width="422" alt="exp" src="https://user-images.githubusercontent.com/63638608/147189376-707079d7-2595-477e-b184-9b9b232c984f.png">
+<img width="322" alt="exp" src="https://user-images.githubusercontent.com/63638608/147189376-707079d7-2595-477e-b184-9b9b232c984f.png">
