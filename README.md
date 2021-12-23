@@ -10,15 +10,15 @@ Our project constructed an hourly playlist generator system based on the real-ti
 
 **Usage**
 
-In "/api/spotify.py" file, fill "MY_CLIENT_ID" and "MY_CLIENT_SECRET" with your Spotify API client ID and secret, you can get them from [Spotify API](https://developer.spotify.com/dashboard/applications). 
+- In "/api/spotify.py" file, fill "MY_CLIENT_ID" and "MY_CLIENT_SECRET" with your Spotify API client ID and secret, you can get them from [Spotify API](https://developer.spotify.com/dashboard/applications). 
 
-In "owm,py" file, fill "MY_API_KEY" with your OpenWeather API key, you can get it from [OpenWeather API](https://home.openweathermap.org/api_keys).
+- In "owm,py" file, fill "MY_API_KEY" with your OpenWeather API key, you can get it from [OpenWeather API](https://home.openweathermap.org/api_keys).
 
-Run "schedule_fetching.py" file, which is scheduled to predict weather every hour and save the predicted results into "predicted_results" folder.
+- Run "schedule_fetching.py" file, which is scheduled to predict weather every hour and save the predicted results into "predicted_results" folder.
 
-Run "main.py" file.
+- Run "main.py" file.
 
-Open http://127.0.0.1:8080/ in Google Chrome. 
+- Open http://127.0.0.1:8080/ in Google Chrome. 
 
 **Demo Webpage**
 
