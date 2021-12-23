@@ -9,10 +9,9 @@ from sklearn.preprocessing import StandardScaler
 import requests
 import datetime
 
-# APIKEY='4a39d509528e58d16ccddf16bfbf28fb'
-APIKEY='d72d4c09b55d867e5ac4a2ed20866a42'
-# APIKEY='ec630f7532ddd44526a04cbf39932f32'
-# APIKEY = '0fd43ae99296d93c97144147e7a60c63'
+
+APIKEY='MY_API_KEY'
+
 place = 'New York City,US'
 def owm_manager_auth(key, place):
     owm = pyowm.OWM(APIKEY)

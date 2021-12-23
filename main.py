@@ -11,7 +11,7 @@ from urllib.parse import urlencode
 from api import spotify
 
 app = Flask(__name__)
-app.secret_key = '3d6f45a5fc12445dbac2f59c3b6c7cb1'
+app.secret_key = 'MY_API_KEY'
 PORT = spotify.PORT
 
 @app.route("/")

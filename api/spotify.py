@@ -11,8 +11,8 @@ import json
 import base64
 from os import environ
 
-CLIENT_ID = "fa8ce7cce4a041cdb1ec0893add69c08"
-CLIENT_SECRET = "fa16c21acc9d4032bdebb9bccc3ec1cd"
+CLIENT_ID = "MY_CLIENT_ID"
+CLIENT_SECRET = "MY_CLIENT_SECRET"
 
 # Spotify URLS
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
