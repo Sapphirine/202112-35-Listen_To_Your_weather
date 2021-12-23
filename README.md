@@ -1,26 +1,17 @@
-# spotify-weather
+# Listen to Your Weather
 
 
-This Flask app uses your zip code to first get the current weather. With that weather, it'll look through your top-played tracks and get top 5 songs that correlate with the weather. Using the top 5 song as seeds to get recommendation from Spotify. With the recommendation tracks, this app will create a playlist with the recommendation tracks.
+Our project constructed an hourly playlist generator system based on the real-time weather forecast using the 'OpenWeather' API, and 'Spotify' API. We performed experiments for temperature model selection by varying response encoding method, window size and model type. We finally deployed a real-time LSTM model in predicting both weather category and temperature. Due to privacy issues and access limits, we are not able to fetch global music playing data and construct any recommendation models, thus we recommend songs based on the user's playing history and top 50 music playlists provided by API. Our final product is a website where users could login, view 7 hours ahead temperature prediction results and play with the recommended playlists. 
 
-## Screenshots
+## Usage
 
+In "/api/spotify.py" file, fill "YOUR_CLIENT_ID" and "YOUR_CLIENT_SECRET" with your Spotify API client ID and secret, you can get them from [Spotify API](https://developer.spotify.com/dashboard/applications). 
 
-localhost:8080
-![Home Screenshot](https://i.imgur.com/AEVEI9W.png "Home Screenshot")
+In "owm,py" file, fill "YOUR_API_KEY" with your OpenWeather API key, you can get it from [OpenWeather API](https://home.openweathermap.org/api_keys).
 
-localhost:8080/callback/q
-![Recommend Screenshot](https://i.imgur.com/KTVgzfy.png "Recommend Screenshot")
+Run "schedule_fetching.py" file, which is scheduled to predict weather every hour and save the predicted results into "predicted_results" folder.
 
+Run "main.py" file.
 
-## References
+Open http://127.0.0.1:8080/ in Google Chrome.
 
-
-Utilizes Flask with Python 3.7 and [Spotify API](https://developer.spotify.com/documentation/web-api/) & [OpenWeatherMap API](https://openweathermap.org/api) with OAuth 2.0 Authentication.
-
-## What can be done better
-
-
-In [recommendation tracks](https://developer.spotify.com/documentation/web-api/reference/browse/get-recommendations/), you're allowed to put in audio_features. So correlate audio_features and weather together to come up with better recommendation system.
-
-Also, changing the weight of audio_features fields so that the results are better.
