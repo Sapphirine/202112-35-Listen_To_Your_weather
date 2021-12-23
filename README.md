@@ -15,3 +15,5 @@ Run "main.py" file.
 
 Open http://127.0.0.1:8080/ in Google Chrome.
 
+<img width="549" alt="First_Page" src="https://user-images.githubusercontent.com/63638608/147186308-e905d09a-4a08-4bed-8cb8-2757ffe30493.png">
+<img width="550" alt="Redirect_URL" src="https://user-images.githubusercontent.com/63638608/147186318-0df7ed0d-6af9-4070-8df0-f63383dc5697.png">
