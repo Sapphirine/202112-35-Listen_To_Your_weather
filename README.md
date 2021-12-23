@@ -2,7 +2,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 EECS E6893 Final Project
 Group 35
----
+
 
 ## Overview
 
