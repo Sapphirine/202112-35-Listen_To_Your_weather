@@ -18,15 +18,18 @@ PORT = spotify.PORT
 def weather():
     global weather_word
     global weather_id
-
-    now = datetime.now(timezone('US/Eastern'))
-    hour = int(now.strftime("%H"))
+    from datetime import timezone
+    now = datetime.now(timezone.utc)
+    hour = datetime.now(timezone.utc).hour
     time = now.strftime("%Y-%m-%d-%H")
+
+    # hour = int(datetime.now(timezone('US/Eastern')).strftime("%H"))
     weather = []
-    with open(f"predicted_results/{time}_pred_id.txt", 'r') as f1, open(f"predicted_results/{time}_pred_temp.txt", 'r') as f2:
-        for id, temp in zip(f1, f2):
-            weather_line = [int(id), int(temp)]
-            weather.append(weather_line)
+    with open(f"predicted_results/{time}_pred_id.txt", 'r') as reader:
+        for line in reader:
+            weather_line = line.split(',')
+            weather_line_int = [int(float(ele)) for ele in weather_line]
+            weather.append(weather_line_int)
 
     for wt in weather:
         wt.append(f'{hour}'+":00")
